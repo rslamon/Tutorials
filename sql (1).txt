@@ -1,0 +1,422 @@
+Select * from SUBJECTS where JSUBJECTID=701001014
+Select * from SUBJECTS_HIST where JSUBJECTID=701001014
+Select * from VISITS_HIST where VSUBJECTID=43;
+Select * from RANDSCHED where RRANDNO=14
+Select * from LNK_HTML_LOGGER_COMMARB where P_CAUID=91
+Select * from COMMARB where CA_UID=91
+Select * from COMMARB where CA_CDTTRIG = '13-AUG-18'
+Select * from USERS where U_UID = 146
+
+Select * from SUBJECTS where JSUBJECTID=701001012
+
+SELECT u_uid, s_number, rd_shortdesc, nvl(u_drugsupplyid,0) u_drugsupplyid FROM v_user_permissions WHERE s_uid = '9441'
+
+SELECT a.* FROM MESSAGES a where a.mprocess in ('GENERAL', 'SITETIMEZONE')
+SELECT *  from (select * from v_scriptsitetimezone)
+SELECT s_sitename, s_uid  from (select * from v_scriptsitetimezone)
+
+select * from customreportcolumns where crc_crid = 5 order by crc_order asc
+
+select * from v_scriptcustomreportshierarchy where cr_parentid = 5 and u_uid = 158 order by cr_order asc
+
+SELECT *  from (select * from (select a.*, rownum DefaultSortColumn from (v_scriptadminiplog) a where site = '011'))
+
+SELECT *  from (select * from (select a.*, rownum DefaultSortColumn from (v_scriptadminiplog) a where site = '011' order by orderno asc))
+
+SELECT defn FROM ivrsparms WHERE upper(name) = 'CONSIGNMENTLENGTH'
+
+SELECT * FROM V_SCRIPTSITEIPRECEIPT WHERE isiteno = '001' and iorderno = '30001'
+
+SELECT * FROM V_SCRIPTSITEIPRECEIPT WHERE isiteno = '001' and iorderno is not null
+
+INSERT INTO "ALLE8248DEVL"."CUSTOMREPORTCOLUMNS" (CRC_CRID, CRC_ORDER, CRC_HEADERTEXT, CRC_DATAFIELD, CRC_DATATYPE, CRC_WIDTH, CRC_FILTERTYPE) VALUES ('4', '17', 'Early Terminatiion', 'patientet', 'System.Decimal', '90', 'IN')
+
+
+INSERT INTO "ALLE8248DEVL"."CUSTOMREPORTCOLUMNS" (CRC_CRID, CRC_ORDER, CRC_HEADERTEXT, CRC_DATAFIELD, CRC_DATATYPE, CRC_WIDTH, CRC_FILTERTYPE) VALUES ('4', '17', 'Study Completion', 'patientco', 'System.Decimal', '80', 'IN')
+
+INSERT INTO "ALLE8284DEVL"."PERMISSIONS" (PERM_UID, PERM_DESC, PERM_SHORTDESC, PERM_ENABLED) VALUES ('103', 'ELPRO CANNULA ORDER SUMMARY', 'EOS', '-1')
+
+INSERT INTO "ALLE8284DEVL"."CUSTOMREPORTCOLUMNS" (CRC_CRID, CRC_ORDER, CRC_HEADERTEXT, CRC_WIDTH, CRC_FILTERTYPE) VALUES ('2', '31', 'Subject Age', '90', 'IN')
+
+
+SELECT distinct vdatavalue Gender FROM visitdata where vdatadesc='GENDER' ORDER BY Gender
+SELECT distinct vdatavalue FSP FROM visitdata where vdatadesc='FSP' ORDER BY vdatavalue
+SELECT distinct vdatavalue FSP FROM visitdata where vdatadesc='FSP' ORDER BY FSP
+
+SELECT distinct vdatavalue InRoute FROM visitdata where vdatadesc='INTENDEDROUTE' ORDER BY inRoute
+
+SELECT distinct ivrsgender from v_rptsite_elog ORDER BY ivrsgender
+
+SELECT distinct ivrsRandType from v_rptsite_elog where ivrsRandType is not null ORDER BY ivrsRandType
+
+SELECT distinct ivrsRandType from v_rptsite_elog ORDER BY ivrsRandType
+
+SELECT distinct ivrsRandType ivrsRandTypeA from v_rptsite_elog where ivrsRandType is not null ORDER BY ivrsRandTypeA
+
+SELECT distinct ivrsTreatArm ivrsTreatArm from v_rptsite_elog ORDER BY ivrsTreatArm asc
+
+SELECT distinct ivrsTreatArm || ' '|| ivrsRandType ivrsTreatArmBob from v_rptsite_elog ORDER BY ivrsTreatArmBob desc
+
+SELECT distinct ivrsS0Gender from v_pivot_visits ORDER BY ivrsS0Gender
+SELECT distinct country FROM v_reportElproOrderSummary order by country
+
+select count(vs.ivrss0gender) from v_pivot_visits vs where vs.ivrss0gender = 'MALE'
+select count(vs.ivrss0gender) from v_pivot_visits vs where vs.ivrss0gender = 'FEMALE'
+
+SELECT distinct ivrsRandType ivrsRandTypeA from v_rptsite_elog ORDER BY ivrsRandTypeA
+
+select
+
+ ivrssitenumber,
+               sitenumber,
+               a.subjectunid,
+               a.ivrssubjectid,
+               a.visitdesc,
+               a.vvisitdesc,
+               a.vvisitdesc Bob_A,
+               a.visitdaysprojected,              
+               a.vvisitdate,
+               a.projected,
+               ordernum,
+               a.actual_date,
+               a.projected_date,
+               a.day_diff,               
+               ivrsv0dateshort ivrsv0date,
+               ordernum test1,
+              actual_date Bob1
+            
+            
+            from (select distinct a.subjectunid,
+                                  ivrssubjectid,
+                                  a.visitdesc,
+                                  a.vvisitdesc,
+                                  visitdaysprojected,                                 
+                                  vvisitdate,
+                                  projected,
+                                 ordernum,
+                                  ivrsv0dateshort,
+                                  to_char(vvisitdate, 'DD-MON-YYYY') actual_date,
+                                  (trunc(ivrsv0dateshort) + visitdaysprojected) projected_date,
+                                  (trunc(ivrsv0dateshort) + visitdaysprojected) - to_date(vvisitdate) day_diff,
+                                  ivrssiteno ivrssitenumber,
+                                  ivrssiteno sitenumber
+
+                    from (select a.subjectid subjectunid,
+                                 a.ivrssubjectid,
+                                 vvisitdesc,
+                                 visitdaysprojected,
+                                 ordernum,
+                                 visitdesc,
+                                 ivrsv0dateshort,
+                                 projected
+                                 
+                            from v_scriptvisitdaysprojected z
+                                join v_call_subjects a
+                                on ivrsv0dateshort is not null) a
+                        left join v_comm_visits z
+                        on a.subjectunid = z.vsubjectid
+                        and upper(a.vvisitdesc) = upper(z.vvisitdesc)) a
+
+            order by a.subjectunid,
+                     visitdaysprojected asc;
+                     
+           
+           
+select
+         v.vsubjectid  Bob2,
+         vsubjectid                 As subjectunid,
+         v.subjectid,
+         v.ivrsshowinit               As ivrsinit,
+         ivrsshowdob                As ivrsdob,
+         To_Date(ivrss0dateshort)   As IVRSS0DATE,
+         ivrss0signedform,
+         To_Date(ivrss0consentdate) As IVRSS0CONSENTDATE,
+         To_Date(ivrss1dateshort)   As IVRSS1DATE,
+         To_Date(ivrssfdate)        As IVRSSFDATE,
+         To_Date(ivrsv0dateshort)   As IVRSV0DATE,
+         ivrsv0strata,
+         To_Date(ivrsv1dateshort)   As IVRSV1DATE,
+         To_Date(ivrsv2dateshort)   As IVRSV2DATE,
+         To_Date(ivrsuv0dateshort)  As IVRSUV0DATE,
+         To_Date(ivrsuv1dateshort)  As IVRSUV1DATE,
+         To_Date(ivrsetdate)        As IVRSETDATE,
+         To_Date(ivrscodate)        As ivrscodate,
+         To_Date(ivrsbreakblinddate, 'DD-MON-YYYY HH24:MI:SS') As IVRSBREAKBLINDDATE,
+         (Case When ivrsbreakblinddate Is Not Null Then 'Yes' Else 'No' End) As ivrsEBB,
+         ivrsstatus,
+         s_pilname  As pilname,
+         s_country  As COUNTRY,
+         ivrssiteno As IVRSSITENUMBER,
+         ivrssiteno As s_number,
+         ivrssiteno As SITENUMBER,
+         ivrsS0Gender as ivrsgender,
+         ivrsS0FSP as ivrsfsb,
+         ivrsS0IntendedRoute as ivrsIntendedRoute,
+          ivrsS0ConsentAge as ivrsS0ConsentAge,
+          ivrsV0RandType as ivrsRandType,
+          ivrsV0TreatArm as ivrsTreatArm,
+          case
+            when ivrsv0dateshort is not null then 
+              to_char(To_Date(ivrsv0dateshort, 'DD-MON-YYYY') - To_Date(ivrss0dateshort, 'DD-MON-YYYY'))
+            when ivrssfdate is not null then 'N/A'
+            else to_char(to_date(to_localtime_site(f_call_sysdateutc,ivrssiteno)) - to_date(ivrss0date))
+         end ELAPSEDDAYS            
+           
+                  
+           From v_pivot_visits v
+    Join sites On ivrssiteno = s_number
+   Order By subjectid
+              
+
+Select
+        piname,
+        s_number,
+        country,       
+        sitestatus,        
+        sum(ivrsmale)ivrsmale,
+        sum(ivrsfemale)ivrsfemale,
+        sum(ivrfsp1)ivrfsp1,
+        sum(ivrfsp3)ivrfsp3,
+        sum(ivrfsp5)ivrfsp5,
+        sum(ivrscannula)ivrscannula,
+        sum(ivrsneedle)ivrsneedle
+        
+      
+        
+           from  (
+            
+                select  s.s_pilname piname,
+                        s.s_number,
+                        su.jid,
+                        s.s_shipcountry country,
+                        v.vvisitdesc,                        
+                        
+                        
+                        sum(case
+                            when (upper(vd.vdatadesc)='GENDER' and upper(vd.vdatavalue) ='FEMALE')
+                            then 1 else 0 end) ivrsfemale,
+                        sum(case
+                            when (upper(vd.vdatadesc)='GENDER' and upper(vd.vdatavalue) ='MALE')
+                            then 1 else 0 end) ivrsmale,
+                        sum(case
+                            when (upper(vd.vdatadesc)='FSP' and upper(vd.vdatavalue) ='I/II')
+                            then 1 else 0 end) ivrfsp1,
+                        sum(case
+                            when (upper(vd.vdatadesc)='FSP' and upper(vd.vdatavalue) ='III/IV')
+                            then 1 else 0 end) ivrfsp3,
+                        sum(case
+                            when (upper(vd.vdatadesc)='FSP' and upper(vd.vdatavalue) ='V/VI')
+                            then 1 else 0 end) ivrfsp5,
+                        sum(case
+                            when (upper(vd.vdatadesc)='INTENDEDROUTE' and upper(vd.vdatavalue) ='CANNULA')
+                            then 1 else 0 end) ivrscannula,
+                        sum(case
+                            when (upper(vd.vdatadesc)='INTENDEDROUTE' and upper(vd.vdatavalue) ='NEEDLE')
+                            then 1 else 0 end) ivrsneedle,
+                            
+                             
+                        
+                        case
+                            when (s_enabled = 2 and s_status in (1, 2)) then 'Pending'
+                            when (s_enabled = 1) then 'Registered'
+                            when (s_enabled = -1 and s_status = 3) then 'Triggered'
+                            when (s_enabled = -1 and s_status = 4) then 'Activated'
+                            when (s_enabled = 2 and  s_status = 4) then 'Unregistered'
+                        end SiteStatus                        
+                        
+                        
+                from    sites s,
+                        subjects su,
+                        visits v,
+                        visitdata vd
+                where s.s_number = su.jsiteno (+)
+                and su.jid = v.vsubjectid (+)
+                and v.vid = vd.vid (+)
+                group by  s_pilname,s_number, jid, s_shipcountry, vvisitdesc,
+                          case
+                            when (s_enabled = 2 and s_status in (1, 2)) then 'Pending'
+                            when (s_enabled = 1) then 'Registered'
+                            when (s_enabled = -1 and s_status = 3) then 'Triggered'
+                            when (s_enabled = -1 and s_status = 4) then 'Activated'
+                            when (s_enabled = 2 and  s_status = 4) then 'Unregistered'
+                         end)
+  group by piname, s_number,country, sitestatus
+  order by s_number;
+  
+  
+  --Ah!
+  select
+               v.vsubjectid Yawn,
+               v.vvisitdesc Argh,
+               v.vvisitdate Yikes,
+               v.vcalldate Sheesh,
+               v.vdatadesc Bah,
+               v.vdatavalue oy,
+               
+              case
+              when upper(vvisitdesc )='PatientS0' or upper(vdatavalue)='MALE' then 1
+              else 0
+              end bobCase,
+              case
+               when upper(vdatadesc)='INTENDEDROUTE' and upper(vdatavalue)='NEEDLE' then 'Y'
+              else 'N'
+              end ivrBob,
+              
+              decode(upper(vvisitdesc || vdatadesc), 'PATIENTS0COLLECTAGE',  vdatavalue, '') bobConsentAge
+              
+           
+         From v_comm_visits v
+           
+    Join sites On ivrssiteno = s_number
+   Order By subjectid
+  
+  
+  select (ivrss0gender ||
+         case when ivrss0consentage < 25 then '24'
+              when (ivrss0consentage >= 25 and ivrss0consentage <= 35) then '35'
+              else '100'
+         end ||ivrss0fsp||ivrss0intendedroute) cohortsshortname
+from v_pivot_visits where (subjectstatus >=200 or subjectstatus in (203,204))
+
+
+select * from v$version where banner like '%Oracle%'
+
+
+select a.site, a.visittype, a.capenabled, a.capvalue, a.ewsendto, a.ewtrigger, a.capoverageaction, a.capalert, a.capmessage
+from enrollmentcaps_hist a
+where a.site=001
+
+select
+    nd_siteno as SITENUMBER,
+    case 
+  when (s.s_enabled = 1) then 'Registered'
+          
+   when (s.s_enabled = -1 and
+          s.s_status = 3) then 'Triggered'
+          
+    when (s.s_enabled = -1 and
+          s.s_status = 4) then 'Activated'
+   
+    end SiteStatus,
+    S_PILNAME as PILASTNAME,
+    S_COUNTRY as COUNTRY,
+    sum(case when nd_orderdesc = 'ELPRO' then nd_orderqty else 0 end) ELPROORDERED,
+    sum(case when nd_orderdesc = 'CANNULA' then nd_orderqty else 0 end) CANNULAORDERED
+  
+    
+    from non_drugorders
+    join sites s on nd_siteno=s.s_number
+    group by nd_siteno,S_PILNAME,S_COUNTRY,s.s_enabled,s.s_status
+    having sum(nd_orderqty)> 0
+    order by nd_siteno;
+    
+    select ca_cf2,count(ca_cf5)elpro_totals_per_site from commarb
+    where lower(ca_cf4)= 'elpro' and ca_cf5 > 0
+    group by ca_cf2
+    
+    select ca_cf2,count(ca_cf8)cannula_totals_per_site from commarb
+    where lower(ca_cf7)= 'cannula' and ca_cf8 > 0
+    group by ca_cf2
+    
+    
+    
+    --###############
+   select ca_cf2 SiteNumber,
+ case
+    when (s.s_enabled = 2 and
+          s.s_status = 1) then 'Pending'
+    when (s.s_enabled = 1) then 'Registered'
+    when (s.s_enabled = -1 and
+          s.s_status = 3) then 'Triggered'
+    when (s.s_enabled = -1 and
+          s.s_status = 4) then 'Activated'
+    when (s.s_enabled = 2 and
+          s.s_status in (2, 4)) then 'Unregistered'
+end SiteStatus,
+s.s_pilname PILastName,
+s.s_country Country,
+sum(ca_cf5) ELPROORDERED
+from
+(select ca_cf2, ca_cf4 ,ca_cf5 from
+((select ca.ca_cf2 ,ca.ca_cf4, ca.ca_cf5
+from commarb ca
+where ca.ca_cf4='Elpro')
+union all
+(select cah.ca_cf2, cah.ca_cf4,cah.ca_cf5
+from commarb_hist cah
+where cah.ca_cf4='Elpro')
+))
+
+join sites s on ca_cf2=s.s_number
+group by ca_cf2, s.s_pilname,s.s_country,s.s_enabled,s.s_status
+order by ca_cf2
+
+--########################
+ select ca_cf2 SiteNumber,
+ case
+    when (s.s_enabled = 2 and
+          s.s_status = 1) then 'Pending'
+    when (s.s_enabled = 1) then 'Registered'
+    when (s.s_enabled = -1 and
+          s.s_status = 3) then 'Triggered'
+    when (s.s_enabled = -1 and
+          s.s_status = 4) then 'Activated'
+    when (s.s_enabled = 2 and
+          s.s_status in (2, 4)) then 'Unregistered'
+end SiteStatus,
+s.s_pilname PILastName,
+s.s_country Country,
+sum(ca_cf5) ELPROORDERED
+from
+(select ca_cf2, ca_cf4 ,ca_cf5 from
+((select ca.ca_cf2 ,ca.ca_cf4, ca.ca_cf5
+from commarb ca
+where ca.ca_cf4='Elpro')
+union all
+(select cah.ca_cf2, cah.ca_cf4,cah.ca_cf5
+from commarb_hist cah
+where cah.ca_cf4='Elpro')
+))
+
+sum(ca_cf8) CANNULAORDERED
+from
+(select ca_cf2, ca_cf7 ,ca_cf8 from
+((select ca.ca_cf2 ,ca.ca_cf7, ca.ca_cf8
+from commarb ca
+where ca.ca_cf7='Cannula')
+union all
+(select cah.ca_cf2, cah.ca_cf7,cah.ca_cf8
+from commarb_hist cah
+where cah.ca_cf7='Cannula')
+))
+
+join sites s on ca_cf2=s.s_number
+group by ca_cf2, s.s_pilname,s.s_country,s.s_enabled,s.s_status
+order by ca_cf2
+
+
+select
+      nd_siteno as SITENUMBER,
+    case
+    when (s.s_enabled = 2 and
+          s.s_status = 1) then 'Pending'
+    when (s.s_enabled = 1) then 'Registered'
+    when (s.s_enabled = -1 and
+          s.s_status = 3) then 'Triggered'
+    when (s.s_enabled = -1 and
+          s.s_status = 4) then 'Activated'
+    when (s.s_enabled = 2 and
+          s.s_status in (2, 4)) then 'Unregistered'
+    end SiteStatus,
+    S_PILNAME as PILASTNAME,
+    S_COUNTRY as COUNTRY,
+    sum(nd_orderqty)as ELPROORDERED
+    
+    from non_drugorders
+    join sites s on nd_siteno=s.s_number
+    group by nd_siteno,S_PILNAME,S_COUNTRY,s.s_enabled,s.s_status
+    having sum(nd_orderqty)> 0
+    order by nd_siteno;
+
+
+select * from menuoptions where mdescription like '%(Un%'

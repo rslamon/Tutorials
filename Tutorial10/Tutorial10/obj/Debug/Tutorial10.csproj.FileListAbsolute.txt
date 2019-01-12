@@ -1,0 +1,7 @@
+C:\Users\rslam\source\repos\Tutorial10\Tutorial10\bin\Debug\Tutorial10.exe.config
+C:\Users\rslam\source\repos\Tutorial10\Tutorial10\bin\Debug\Tutorial10.exe
+C:\Users\rslam\source\repos\Tutorial10\Tutorial10\bin\Debug\Tutorial10.pdb
+C:\Users\rslam\source\repos\Tutorial10\Tutorial10\obj\Debug\Tutorial10.csprojAssemblyReference.cache
+C:\Users\rslam\source\repos\Tutorial10\Tutorial10\obj\Debug\Tutorial10.csproj.CoreCompileInputs.cache
+C:\Users\rslam\source\repos\Tutorial10\Tutorial10\obj\Debug\Tutorial10.exe
+C:\Users\rslam\source\repos\Tutorial10\Tutorial10\obj\Debug\Tutorial10.pdb

@@ -1,0 +1,7 @@
+C:\Users\rslam\source\repos\Tutorial 12\Tutorial 12\bin\Debug\Tutorial 12.exe.config
+C:\Users\rslam\source\repos\Tutorial 12\Tutorial 12\bin\Debug\Tutorial 12.exe
+C:\Users\rslam\source\repos\Tutorial 12\Tutorial 12\bin\Debug\Tutorial 12.pdb
+C:\Users\rslam\source\repos\Tutorial 12\Tutorial 12\obj\Debug\Tutorial 12.csproj.CoreCompileInputs.cache
+C:\Users\rslam\source\repos\Tutorial 12\Tutorial 12\obj\Debug\Tutorial 12.exe
+C:\Users\rslam\source\repos\Tutorial 12\Tutorial 12\obj\Debug\Tutorial 12.pdb
+C:\Users\rslam\source\repos\Tutorial 12\Tutorial 12\obj\Debug\Tutorial 12.csprojAssemblyReference.cache

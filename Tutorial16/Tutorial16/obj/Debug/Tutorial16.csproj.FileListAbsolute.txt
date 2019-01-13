@@ -1,0 +1,7 @@
+C:\Users\rslam\source\repos\Tutorial16\Tutorial16\bin\Debug\Tutorial16.exe.config
+C:\Users\rslam\source\repos\Tutorial16\Tutorial16\bin\Debug\Tutorial16.exe
+C:\Users\rslam\source\repos\Tutorial16\Tutorial16\bin\Debug\Tutorial16.pdb
+C:\Users\rslam\source\repos\Tutorial16\Tutorial16\obj\Debug\Tutorial16.csprojAssemblyReference.cache
+C:\Users\rslam\source\repos\Tutorial16\Tutorial16\obj\Debug\Tutorial16.csproj.CoreCompileInputs.cache
+C:\Users\rslam\source\repos\Tutorial16\Tutorial16\obj\Debug\Tutorial16.exe
+C:\Users\rslam\source\repos\Tutorial16\Tutorial16\obj\Debug\Tutorial16.pdb

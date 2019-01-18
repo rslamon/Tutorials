@@ -1,7 +1,7 @@
 C:\Users\a354478\source\repos\ClassDemo\ClassDemo\bin\Debug\ClassDemo.exe.config
 C:\Users\a354478\source\repos\ClassDemo\ClassDemo\bin\Debug\ClassDemo.exe
 C:\Users\a354478\source\repos\ClassDemo\ClassDemo\bin\Debug\ClassDemo.pdb
+C:\Users\a354478\source\repos\ClassDemo\ClassDemo\obj\Debug\ClassDemo.csprojResolveAssemblyReference.cache
 C:\Users\a354478\source\repos\ClassDemo\ClassDemo\obj\Debug\ClassDemo.csproj.CoreCompileInputs.cache
 C:\Users\a354478\source\repos\ClassDemo\ClassDemo\obj\Debug\ClassDemo.exe
 C:\Users\a354478\source\repos\ClassDemo\ClassDemo\obj\Debug\ClassDemo.pdb
-C:\Users\a354478\source\repos\ClassDemo\ClassDemo\obj\Debug\ClassDemo.csprojResolveAssemblyReference.cache

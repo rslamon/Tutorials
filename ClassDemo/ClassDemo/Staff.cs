@@ -11,7 +11,7 @@ namespace ClassDemo
         private string nameOfStaff;
         private const int hourlyRate = 30;
         private int hWorked;
-        
+
         public int HoursWorked
         {
             get
@@ -21,11 +21,11 @@ namespace ClassDemo
             set
             {
                 if (value > 0)
-               
+
                     hWorked = value;
-                    else
+                else
                     hWorked = 0;
-                
+
             }
         }
         public void PrintMessage()
@@ -37,10 +37,10 @@ namespace ClassDemo
         {
             PrintMessage();
             int StaffPay = hWorked * hourlyRate;
-            if( hWorked > 0)            
+            if (hWorked > 0)
                 return StaffPay;
-                else
-                return 0;           
+            else
+                return 0;
 
         }
 
@@ -58,7 +58,7 @@ namespace ClassDemo
             return "Name of staff =" + nameOfStaff + ", Hourly rate = " + hourlyRate + " ,hWorked = " + hWorked;
         }
 
-        public Staff (string Name)
+        public Staff(string Name)
         {
             nameOfStaff = Name;
             Console.WriteLine("\n" + nameOfStaff);
@@ -71,5 +71,6 @@ namespace ClassDemo
             Console.WriteLine("\n" + nameOfStaff);
             Console.WriteLine("---------------------------------");
         }
+
     }
 }

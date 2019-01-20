@@ -1,0 +1,13 @@
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\bin\Debug\WpfTutorial.exe.config
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\bin\Debug\WpfTutorial.exe
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\bin\Debug\WpfTutorial.pdb
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\MainWindow.baml
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\MainWindow.g.cs
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\App.g.cs
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\WpfTutorial_MarkupCompile.cache
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\WpfTutorial.g.resources
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\WpfTutorial.Properties.Resources.resources
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\WpfTutorial.csproj.GenerateResource.cache
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\WpfTutorial.csproj.CoreCompileInputs.cache
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\WpfTutorial.exe
+C:\Users\rslam\source\repos\WpfTutorial\WpfTutorial\obj\Debug\WpfTutorial.pdb

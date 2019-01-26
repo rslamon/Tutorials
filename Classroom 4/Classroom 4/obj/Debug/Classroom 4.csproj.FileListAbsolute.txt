@@ -1,0 +1,9 @@
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\bin\Debug\Classroom 4.exe.config
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\bin\Debug\Classroom 4.exe
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\bin\Debug\Classroom 4.pdb
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\obj\Debug\Classroom_4.Form1.resources
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\obj\Debug\Classroom_4.Properties.Resources.resources
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\obj\Debug\Classroom 4.csproj.GenerateResource.cache
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\obj\Debug\Classroom 4.csproj.CoreCompileInputs.cache
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\obj\Debug\Classroom 4.exe
+C:\Users\rslam\source\repos\Classroom 4\Classroom 4\obj\Debug\Classroom 4.pdb

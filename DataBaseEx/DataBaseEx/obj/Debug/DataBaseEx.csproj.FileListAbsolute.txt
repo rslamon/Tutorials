@@ -1,0 +1,6 @@
+C:\Users\rslam\source\repos\DataBaseEx\DataBaseEx\bin\Debug\DataBaseEx.exe.config
+C:\Users\rslam\source\repos\DataBaseEx\DataBaseEx\bin\Debug\DataBaseEx.exe
+C:\Users\rslam\source\repos\DataBaseEx\DataBaseEx\bin\Debug\DataBaseEx.pdb
+C:\Users\rslam\source\repos\DataBaseEx\DataBaseEx\obj\Debug\DataBaseEx.csproj.CoreCompileInputs.cache
+C:\Users\rslam\source\repos\DataBaseEx\DataBaseEx\obj\Debug\DataBaseEx.exe
+C:\Users\rslam\source\repos\DataBaseEx\DataBaseEx\obj\Debug\DataBaseEx.pdb

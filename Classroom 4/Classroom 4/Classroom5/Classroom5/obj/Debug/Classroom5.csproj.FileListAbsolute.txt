@@ -1,0 +1,10 @@
+C:\Users\a354478\source\repos\Classroom5\Classroom5\bin\Debug\Classroom5.exe.config
+C:\Users\a354478\source\repos\Classroom5\Classroom5\bin\Debug\Classroom5.exe
+C:\Users\a354478\source\repos\Classroom5\Classroom5\bin\Debug\Classroom5.pdb
+C:\Users\a354478\source\repos\Classroom5\Classroom5\obj\Debug\Classroom5.csprojResolveAssemblyReference.cache
+C:\Users\a354478\source\repos\Classroom5\Classroom5\obj\Debug\Classroom5.Form1.resources
+C:\Users\a354478\source\repos\Classroom5\Classroom5\obj\Debug\Classroom5.Properties.Resources.resources
+C:\Users\a354478\source\repos\Classroom5\Classroom5\obj\Debug\Classroom5.csproj.GenerateResource.cache
+C:\Users\a354478\source\repos\Classroom5\Classroom5\obj\Debug\Classroom5.csproj.CoreCompileInputs.cache
+C:\Users\a354478\source\repos\Classroom5\Classroom5\obj\Debug\Classroom5.exe
+C:\Users\a354478\source\repos\Classroom5\Classroom5\obj\Debug\Classroom5.pdb

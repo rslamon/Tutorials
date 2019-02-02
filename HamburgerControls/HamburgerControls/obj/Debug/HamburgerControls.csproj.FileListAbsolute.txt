@@ -1,0 +1,10 @@
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\bin\Debug\HamburgerControls.exe.config
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\bin\Debug\HamburgerControls.exe
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\bin\Debug\HamburgerControls.pdb
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\obj\Debug\HamburgerControls.csprojAssemblyReference.cache
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\obj\Debug\HamburgerControls.Form1.resources
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\obj\Debug\HamburgerControls.Properties.Resources.resources
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\obj\Debug\HamburgerControls.csproj.GenerateResource.cache
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\obj\Debug\HamburgerControls.csproj.CoreCompileInputs.cache
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\obj\Debug\HamburgerControls.exe
+C:\Users\rslam\source\repos\HamburgerControls\HamburgerControls\obj\Debug\HamburgerControls.pdb

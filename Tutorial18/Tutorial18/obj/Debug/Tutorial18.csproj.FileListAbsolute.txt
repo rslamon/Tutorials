@@ -1,0 +1,7 @@
+C:\Users\rslam\source\repos\Tutorial18\Tutorial18\bin\Debug\Tutorial18.exe.config
+C:\Users\rslam\source\repos\Tutorial18\Tutorial18\bin\Debug\Tutorial18.exe
+C:\Users\rslam\source\repos\Tutorial18\Tutorial18\bin\Debug\Tutorial18.pdb
+C:\Users\rslam\source\repos\Tutorial18\Tutorial18\obj\Debug\Tutorial18.csprojAssemblyReference.cache
+C:\Users\rslam\source\repos\Tutorial18\Tutorial18\obj\Debug\Tutorial18.csproj.CoreCompileInputs.cache
+C:\Users\rslam\source\repos\Tutorial18\Tutorial18\obj\Debug\Tutorial18.exe
+C:\Users\rslam\source\repos\Tutorial18\Tutorial18\obj\Debug\Tutorial18.pdb
